@@ -1,0 +1,9 @@
+author: JD
+core-version: >=5.1.17
+dependents: 
+description: Plain Revisions
+list: readme config
+plugin-type: plugin
+title: $:/plugins/jd/plainrevs
+type: application/json
+version: 0.0.30

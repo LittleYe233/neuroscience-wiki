@@ -1,0 +1,13 @@
+author: Flibbles
+core-version: >=5.1.22
+demo: http://flibbles.github.io/tw5-relink/
+dependents: 
+description: Reports and renames variables such as `\procedure` or `\function`
+list: readme
+name: Relink Variables
+parent-plugin: $:/plugins/flibbles/relink
+plugin-type: plugin
+source: https://github.com/flibbles/tw5-relink
+title: $:/plugins/flibbles/relink-variables
+type: application/json
+version: 2.4.1

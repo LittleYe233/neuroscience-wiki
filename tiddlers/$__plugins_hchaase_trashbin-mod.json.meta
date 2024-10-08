@@ -1,0 +1,13 @@
+author: HC Haase
+core-version: 5.1.21
+created: 20200402085322510
+creator: HC Haase
+dependents: 
+description: trashbin-mod
+list: readme
+modified: 20200403113442875
+modifier: HC Haase
+plugin-type: plugin
+title: $:/plugins/hchaase/trashbin-mod
+type: application/json
+version: 2.0.0

@@ -1,0 +1,79 @@
+created: 20221013060912950
+creator: PiggyRC
+modified: 20241008133109999
+modifier: e
+page-cover: https://source.unsplash.com/random
+tags: $:/tweaks/cth $:/tags/Stylesheet
+title: $:/tweaks/cth/MyStyle
+type: text/vnd.tiddlywiki
+
+.tc-tiddler-frame textarea.tc-edit-texteditor {
+  -webkit-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.tc-tabbed-table-of-contents-content {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.tc-modal {
+  left: 10% !important;
+  right: 10% !important;
+  width: 80% !important;
+}
+
+h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+.refnotes-tooltiptext {
+  left: -200% !important;
+}
+
+.tc-popup {
+  right: 30px !important;
+  left: 30px !important;
+}
+
+.tc-page-controls .tc-popup {
+  right: 20px !important;
+  left: 0px !important;
+}
+.tc-page-controls .tc-drop-down {
+  min-width: 300px !important;
+}
+
+.tc-tags-wrapper .tc-popup {
+  min-width: 50vw;
+  left: 0px !important;
+}
+.tc-tiddler-info {
+  margin: 0 -15px 0 -15px;
+}
+.tc-story-river {
+  margin-left: {{$:/tweaks/cth/StoryLeft}};
+  margin-right: 0px;
+  padding: 20px 20px 20px 20px;
+}
+.tc-sidebar-scrollable {
+  left:50px;
+  padding: 20px 10px 10px 10px;
+}
+.tc-tiddler-frame {
+  margin-bottom: 10px;
+  padding: 10px 15px 0px 15px;
+}
+.tc-topbar-left {
+  top: 0px;
+  left: 0px;
+}
+}
+@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+}
