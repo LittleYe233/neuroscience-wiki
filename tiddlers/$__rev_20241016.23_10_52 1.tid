@@ -1,0 +1,18 @@
+created: 20241016160009793
+creator: e
+list: $:/tweaks/view/addition
+modified: 20241016160009797
+modifier: e
+rev-created: 20241016154506471
+rev-creator: e
+rev-list-before: $:/core/ui/ViewTemplate/body
+rev-modified: 20241016155738505
+rev-modifier: e
+rev-tags: $:/tags/ViewTemplate
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241016.23:10:52 1
+type: text/vnd.tiddlywiki
+
+* ''中文翻译'': {{!!chinese-translation}}
+* ''英文缩写'': {{!!abbr}}
+* ''参考网址'': <<link to={{reference-url}}>>
