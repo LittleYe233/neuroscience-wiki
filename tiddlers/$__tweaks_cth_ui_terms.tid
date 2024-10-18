@@ -1,0 +1,18 @@
+code-body: yes
+created: 20240410095215327
+creator: e
+modified: 20241018130710697
+modifier: LittleYe233
+tags: $:/tweaks/cth
+title: $:/tweaks/cth/ui/terms
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+| 中文翻译 | 缩写 | 参考链接 |h
+|{{!!chinese-translation}}|{{!!abbr}}|{{!!reference-url}}|
+
+<$transclude>
+
+<$transclude tiddler="$:/language/MissingTiddler/Hint"/>
+
+</$transclude>

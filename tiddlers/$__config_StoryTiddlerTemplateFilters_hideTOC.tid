@@ -1,9 +1,0 @@
-created: 20240410094726855
-creator: e
-modified: 20241008133042224
-modifier: e
-tags: $:/tweaks/cth $:/tags/StoryTiddlerTemplateFilter
-title: $:/config/StoryTiddlerTemplateFilters/hideTOC
-type: text/vnd.tiddlywiki
-
-[tag[bibtex-entry]] [match[PiggyWiki]] :then[{$:/tweaks/cth/config/ui/hideTOC}]

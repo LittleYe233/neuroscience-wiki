@@ -1,0 +1,44 @@
+created: 20241017072837647
+creator: LittleYe233
+list: [[All Terms]]
+modified: 20241017072837649
+modifier: LittleYe233
+rev-created: 20241017072753217
+rev-creator: LittleYe233
+rev-modified: 20241017072753219
+rev-modifier: LittleYe233
+rev-tbl-add-records: 
+rev-tbl-anything: 
+rev-tbl-button-actions: 
+rev-tbl-button-icon: {{$:/core/images/menu-button}}
+rev-tbl-button-tip: 
+rev-tbl-caption: ''{{!!title}}''
+rev-tbl-checkbox-actions-selected: 
+rev-tbl-checkbox-actions-unselected: 
+rev-tbl-checkbox-field: 
+rev-tbl-checkbox-tag: 
+rev-tbl-checkbox-tip: 
+rev-tbl-checkbox-value-selected: 
+rev-tbl-checkbox-value-unselected: 
+rev-tbl-class: tbl-style-default
+rev-tbl-columns: title modified tags
+rev-tbl-expand: 
+rev-tbl-filter: [!is[system]search[]]
+rev-tbl-limit: 10
+rev-tbl-mode: normal
+rev-tbl-page-marker: 
+rev-tbl-show-caption: true
+rev-tbl-show-colgroup: false
+rev-tbl-show-edit: true
+rev-tbl-show-footer: false
+rev-tbl-show-header: true
+rev-tbl-show-mode: true
+rev-tbl-show-pagination: auto
+rev-tbl-sort-by: title
+rev-tbl-sort-negate: false
+rev-tbl-sort-type: nsort
+rev-tbl-style-colgroup: 
+rev-tbl-style-container: 
+rev-tbl-style-table: width:100%;
+title: $:/rev/20241017.15:10:37
+type: text/vnd.tiddlywiki

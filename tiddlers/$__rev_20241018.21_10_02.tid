@@ -1,0 +1,26 @@
+created: 20241018130710691
+creator: LittleYe233
+list: $:/tweaks/cth/ui/terms
+modified: 20241018130710696
+modifier: LittleYe233
+rev-bag: default
+rev-code-body: yes
+rev-created: 20240410095215327
+rev-creator: e
+rev-modified: 20241018130657896
+rev-modifier: LittleYe233
+rev-revision: 10
+rev-tags: $:/tweaks/cth
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241018.21:10:02
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+|中文翻译|缩写|参考链接|h
+|{{!!chinese-translation}}|{{!!abbr}}|{{!!reference-url}}|
+
+<$transclude>
+
+<$transclude tiddler="$:/language/MissingTiddler/Hint"/>
+
+</$transclude>
