@@ -1,0 +1,28 @@
+created: 20241021135258050
+creator: LittleYe233
+list: [[Awakening: Predicting external stimulation to force transitions between different brain states]]
+modified: 20241021135302289
+modifier: LittleYe233
+rev-bibtex-abstract: A fundamental problem in systems neuroscience is how to force a transition from one brain state to another by external driven stimulation in, for example, wakefulness, sleep, coma, or neuropsychiatric diseases. This requires a quantitative and robust definition of a brain state, which has so far proven elusive. Here, we provide such a definition, which, together with whole-brain modeling, permits the systematic study in silico of how simulated brain stimulation can force transitions between different brain states in humans. Specifically, we use a unique neuroimaging dataset of human sleep to systematically investigate where to stimulate the brain to force an awakening of the human sleeping brain and vice versa. We show where this is possible using a definition of a brain state as an ensemble of “metastable substates,” each with a probabilistic stability and occurrence frequency fitted by a generative whole-brain model, fine-tuned on the basis of the effective connectivity. Given the biophysical limitations of direct electrical stimulation (DES) of microcircuits, this opens exciting possibilities for discovering stimulation targets and selecting connectivity patterns that can ensure propagation of DES-induced neural excitation, potentially making it possible to create awakenings from complex cases of brain injury.
+rev-bibtex-author: Deco, Gustavo and Cruzat, Josephine and Cabral, Joana and Tagliazucchi, Enzo and Laufs, Helmut and Logothetis, Nikos K. and Kringelbach, Morten L.
+rev-bibtex-doi: 10.1073/pnas.1905534116
+rev-bibtex-entry-type: article
+rev-bibtex-file: Full Text PDF:/home/littleye233/Zotero/storage/8X8JAA3L/Deco et al. - 2019 - Awakening Predicting external stimulation to force transitions between different brain states.pdf:application/pdf
+rev-bibtex-journal: Proceedings of the National Academy of Sciences
+rev-bibtex-language: en-US
+rev-bibtex-month: sep
+rev-bibtex-note: Publisher: Proceedings of the National Academy of Sciences
+rev-bibtex-number: 36
+rev-bibtex-pages: 18088--18097
+rev-bibtex-shorttitle: Awakening
+rev-bibtex-title: Awakening: {Predicting} external stimulation to force transitions between different brain states
+rev-bibtex-url: https://www.pnas.org/doi/full/10.1073/pnas.1905534116
+rev-bibtex-urldate: 2024-10-15
+rev-bibtex-volume: 116
+rev-bibtex-year: 2019
+rev-created: 20241021135239779
+rev-creator: LittleYe233
+rev-modified: 20241021135239779
+rev-modifier: LittleYe233
+title: $:/rev/20241021.21:10:42
+type: text/vnd.tiddlywiki
