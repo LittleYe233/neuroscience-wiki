@@ -1,22 +1,22 @@
-created: 20241021130219992
+created: 20241021130916832
 creator: LittleYe233
 list: [[My Neuroscience Wiki]]
-modified: 20241021130219994
+modified: 20241021130916833
 modifier: LittleYe233
 rev-bag: default
 rev-created: 20241016162719106
 rev-creator: LittleYe233
-rev-modified: 20241021130025391
+rev-modified: 20241021130509836
 rev-modifier: LittleYe233
 rev-revision: 29
 rev-tags: 
 rev-type: text/vnd.tiddlywiki
-title: $:/rev/20241021.21:10:30
+title: $:/rev/20241021.21:10:35
 type: text/vnd.tiddlywiki
 
 这是一个关于脑科学 (Neuroscience) 的个人学习的 Wiki, 以术语解释为主.
 
 Filter and search in table <$edit-text tiddler="$:/temp/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
 
-<$macrocall $name=table-dynamic filter="[tag[Terms]tag{$:/temp/dtable/search/tag}!is[draft]search:title,caption,tags,chinese-translation,abbr,reference-url{$:/temp/dtable/search}]" class="w-100" fields="title chinese-translation abbr reference-url tags"  caption="''ALL Terms''"/>
+<$macrocall $name=table-dynamic filter="[tag[Terms]!is[draft]search:title,caption,tags,chinese-translation,abbr:some{$:/temp/dtable/search}]" class="w-100" fields="title chinese-translation abbr reference-url tags"  caption="''ALL Terms''"/>
 

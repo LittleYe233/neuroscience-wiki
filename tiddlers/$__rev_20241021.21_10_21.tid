@@ -1,23 +1,23 @@
-created: 20241021110849504
+created: 20241021131832957
 creator: LittleYe233
 list: $:/tweaks/cth/ui/terms
-modified: 20241021110849505
+modified: 20241021131832960
 modifier: LittleYe233
 rev-bag: default
 rev-code-body: yes
 rev-created: 20240410095215327
 rev-creator: e
-rev-modified: 20241021110803327
+rev-modified: 20241021131543995
 rev-modifier: LittleYe233
-rev-revision: 0
+rev-revision: 8
 rev-tags: $:/tweaks/cth
 rev-type: text/vnd.tiddlywiki
-title: $:/rev/20241021.19:10:39
+title: $:/rev/20241021.21:10:21
 type: text/vnd.tiddlywiki
 
 \whitespace trim
 | 中文翻译 | 缩写 | 参考链接 |h
-|{{!!chinese-translation}}|{{!!abbr}}|<a href={{!!reference-url}}/>|
+|{{!!chinese-translation}}|{{!!abbr}}|<a class="tc-tiddlylink-external" href={{!!reference-url}}><$text text={{!!reference-url}}/></a>|
 
 <$transclude>
 

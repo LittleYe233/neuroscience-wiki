@@ -1,0 +1,22 @@
+created: 20241021131755900
+creator: LittleYe233
+list: $:/tweaks/cth/ui/papers
+modified: 20241021131755901
+modifier: LittleYe233
+rev-created: 20241021131532649
+rev-creator: LittleYe233
+rev-modified: 20241021131651603
+rev-modifier: LittleYe233
+rev-tags: $:/tweaks/cth
+title: $:/rev/20241021.21:10:35 1
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+| Doi |h
+|{{!!doi-url}}|
+
+<$transclude>
+
+<$transclude tiddler="$:/language/MissingTiddler/Hint"/>
+
+</$transclude>

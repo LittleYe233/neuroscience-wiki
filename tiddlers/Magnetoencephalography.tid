@@ -1,0 +1,12 @@
+abbr: MEG
+chinese-translation: 脑磁图
+created: 20241021131303571
+creator: LittleYe233
+modified: 20241021131424821
+modifier: LittleYe233
+reference-url: https://en.wikipedia.org/wiki/Magnetoencephalography
+tags: Terms [[Imaging Technique]]
+title: Magnetoencephalography
+type: text/vnd.tiddlywiki
+
+磁脑图（MEG）是一种功能性神经成像技术，通过记录大脑中自然产生的电流所产生的磁场来映射脑活动，使用非常敏感的磁力计。目前，SQUID（超导量子干涉器件）是最常用的磁力计，而SERF（自旋交换无弛豫）磁力计正被研究用于未来的设备。MEG的应用包括对感知和认知脑过程的基础研究、在外科手术前定位受病理影响的区域、确定大脑各部分的功能以及神经反馈。这项技术既可以在临床环境中用于定位异常区域，也可以在实验环境中用于简单地测量脑活动。
