@@ -1,0 +1,22 @@
+created: 20241021113537299
+creator: LittleYe233
+list: [[Diffusion-weighted Magnetic Resonance Imaging]]
+modified: 20241021113537301
+modifier: LittleYe233
+rev-abbr: dMRI
+rev-bag: default
+rev-chinese-translation: 扩散加权磁共振成像
+rev-created: 20241021110919007
+rev-creator: LittleYe233
+rev-modified: 20241021113445046
+rev-modifier: LittleYe233
+rev-reference-url: https://en.wikipedia.org/wiki/Diffusion-weighted_magnetic_resonance_imaging
+rev-revision: 1
+rev-tags: Terms
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241021.19:10:56
+type: text/vnd.tiddlywiki
+
+扩散加权磁共振成像（DWI 或 DW-MRI）是使用特定的MRI序列和生成图像的软件，通过水分子扩散产生对比度来生成磁共振图像。它允许对分子扩散过程进行成像，主要是对生物组织中的水分子进行非侵入性、活体成像。组织中的分子扩散不是随机的，而是反映了与大分子、纤维和膜等多个障碍物的相互作用。因此，水分子的扩散模式可以揭示组织结构的微观细节，无论是正常状态还是疾病状态。一种特殊的DWI称为扩散张量成像（DTI），已广泛用于大脑白质纤维束的成像。
+
+dMRI 可以得到大脑的''结构''连接性（SC）。

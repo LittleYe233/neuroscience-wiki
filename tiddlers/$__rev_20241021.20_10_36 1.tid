@@ -1,0 +1,17 @@
+created: 20241021125739243
+creator: LittleYe233
+list: $:/tweaks/cth/Startup
+modified: 20241021125739245
+modifier: LittleYe233
+rev-bag: default
+rev-created: 20241021124908123
+rev-creator: LittleYe233
+rev-modified: 20241021125016212
+rev-modifier: LittleYe233
+rev-revision: 1
+rev-tags: $:/tags/StartupAction $:/tweaks/cth
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241021.20:10:36 1
+type: text/vnd.tiddlywiki
+
+<$action-setfield $tiddler="$:/temp/dtable/search/tag" text="Terms"/>

@@ -1,0 +1,38 @@
+created: 20241021112813766
+creator: LittleYe233
+list: $:/plugins/kookma/shiraz/templates/body/link
+modified: 20241021112813769
+modifier: LittleYe233
+rev-code-body: yes
+rev-created: 20241021112020160
+rev-creator: LittleYe233
+rev-modified: 20241021112612676
+rev-modifier: LittleYe233
+rev-tags: $:/tags/Table/BodyTemplate $:/tweaks/cth
+rev-tbl-column-list: reference-url
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241021.19:10:24
+type: text/vnd.tiddlywiki
+
+\define display-link-address()
+<$let href={{{[<currentRecord>get<currentColumn>]}}} >
+<a class="tc-tiddlylink-external" href=<<href>>><<showCell>></a>*******
+</$let>
+\end
+\define display-link-address_Locked()
+<$let href={{{[<currentRecord>get<currentColumn>]}}} >
+<a class="tc-tiddlylink-external" href=<<href>>><<showCell_Locked>></a>******
+</$let>
+\end
+
+<$reveal type="nomatch" stateTitle=<<tempTableEdit>> stateIndex="mode" text="edit" tag="td">
+<<display-link-address>>
+</$reveal>
+<$reveal type="match" stateTitle=<<tempTableEdit>> stateIndex="mode" text="edit" tag="td">
+<!--check if the current column is not selected for sorting-->
+<$list filter="[<tempTableSort>getindex[sortIndex]match<currentColumn>]" variable=ignore
+emptyMessage=<<editCell>> >
+<<display-link-address_Locked>>
+</$list>
+</$reveal>
+

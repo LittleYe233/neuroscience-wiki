@@ -1,6 +1,6 @@
 created: 20241016162719106
 creator: LittleYe233
-modified: 20241017072849775
+modified: 20241021130219996
 modifier: LittleYe233
 tags: 
 title: My Neuroscience Wiki
@@ -8,4 +8,7 @@ type: text/vnd.tiddlywiki
 
 这是一个关于脑科学 (Neuroscience) 的个人学习的 Wiki, 以术语解释为主.
 
-{{All Terms}}
+Filter and search in table <$edit-text tiddler="$:/temp/dtable/search" filed=text tag=input default=""/> <$button set="$:/temp/dtable/search" setTo="" tooltip="clear searchbox">x</$button>
+
+<$macrocall $name=table-dynamic filter="[tag[Terms]!is[draft]search:title,caption,tags,chinese-translation,abbr{$:/temp/dtable/search}]" class="w-100" fields="title chinese-translation abbr reference-url tags"  caption="''ALL Terms''"/>
+
