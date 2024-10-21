@@ -1,8 +1,8 @@
 created: 20230516072548451
 creator: e
-modified: 20240902073802687
-modifier: e
+modified: 20241021134343321
+modifier: LittleYe233
 title: $:/config/DefaultSidebarTab
 type: text/vnd.tiddlywiki
 
-$:/tweaks/cth/QuickAdd
+$:/core/ui/SideBar/Recent
