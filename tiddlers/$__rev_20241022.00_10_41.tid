@@ -1,8 +1,9 @@
-created: 20241021135258050
+created: 20241021161507109
 creator: LittleYe233
 list: [[Awakening: Predicting external stimulation to force transitions between different brain states]]
-modified: 20241021135302289
+modified: 20241021161507114
 modifier: LittleYe233
+rev-bag: default
 rev-bibtex-abstract: A fundamental problem in systems neuroscience is how to force a transition from one brain state to another by external driven stimulation in, for example, wakefulness, sleep, coma, or neuropsychiatric diseases. This requires a quantitative and robust definition of a brain state, which has so far proven elusive. Here, we provide such a definition, which, together with whole-brain modeling, permits the systematic study in silico of how simulated brain stimulation can force transitions between different brain states in humans. Specifically, we use a unique neuroimaging dataset of human sleep to systematically investigate where to stimulate the brain to force an awakening of the human sleeping brain and vice versa. We show where this is possible using a definition of a brain state as an ensemble of “metastable substates,” each with a probabilistic stability and occurrence frequency fitted by a generative whole-brain model, fine-tuned on the basis of the effective connectivity. Given the biophysical limitations of direct electrical stimulation (DES) of microcircuits, this opens exciting possibilities for discovering stimulation targets and selecting connectivity patterns that can ensure propagation of DES-induced neural excitation, potentially making it possible to create awakenings from complex cases of brain injury.
 rev-bibtex-author: Deco, Gustavo and Cruzat, Josephine and Cabral, Joana and Tagliazucchi, Enzo and Laufs, Helmut and Logothetis, Nikos K. and Kringelbach, Morten L.
 rev-bibtex-doi: 10.1073/pnas.1905534116
@@ -15,14 +16,21 @@ rev-bibtex-note: Publisher: Proceedings of the National Academy of Sciences
 rev-bibtex-number: 36
 rev-bibtex-pages: 18088--18097
 rev-bibtex-shorttitle: Awakening
-rev-bibtex-title: Awakening: {Predicting} external stimulation to force transitions between different brain states
+rev-bibtex-title: Awakening: Predicting external stimulation to force transitions between different brain states
 rev-bibtex-url: https://www.pnas.org/doi/full/10.1073/pnas.1905534116
 rev-bibtex-urldate: 2024-10-15
 rev-bibtex-volume: 116
 rev-bibtex-year: 2019
 rev-created: 20241021135239779
 rev-creator: LittleYe233
-rev-modified: 20241021135239779
+rev-modified: 20241021150841970
 rev-modifier: LittleYe233
-title: $:/rev/20241021.21:10:42
+rev-revision: 5
+rev-tags: Papers
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241022.00:10:41
 type: text/vnd.tiddlywiki
+
+!! 总结
+
+本文从用亚稳态定义大脑状态出发，指出大脑状态是一种广泛传播网络的动态持续演变，是条件依赖的自组织行为，历经稳态、准稳态、高低活动状态和瞬态排列。大脑状态曾被描述为吸引子和生成模型，但都在未能捕获亚稳态概念上产生局限。文章提出概率亚稳定子状态（PMS）的概念，其被认为是常规且持久的大脑状态的随机划分，继而可以令生成式全脑模型拟合不同状态的 PMS 空间并用模拟刺激触发外部强制状态转变，以解决大脑如何切换状态的问题。从结果上，对全脑模型和 PMS 空间的分析包含三个部分：首先，使用主特征向量动态分析（[[LEiDA|Leading Eigenvector Dynamics Analysis]]）方法识别亚稳态，并结合其发生概率和转移概率组成 PMS 空间；其次，用超临界 Hopf 分岔模型描述大脑网络节点，组成大脑大规模模型，并用其拟合经验/实验数据 PMS 空间；最后，用有效连接性（[[Effective Connectivity]]）细调全脑模型的结构连接，优化全脑模型。文章同时指出强制大脑状态转换的机制是对全脑模型施加不同刺激，改变节点的 Hopf 分岔参数来实现。

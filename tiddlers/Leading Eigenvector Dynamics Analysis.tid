@@ -1,0 +1,27 @@
+abbr: LEiDA
+chinese-translation: 主特征向量动态分析
+created: 20241021150856518
+creator: LittleYe233
+modified: 20241021160930414
+modifier: LittleYe233
+reference-url: https://www.nature.com/articles/s41598-017-05425-7
+tags: Terms Framework
+title: Leading Eigenvector Dynamics Analysis
+type: text/vnd.tiddlywiki
+
+!! 工作流程
+
+参照 <<ref [[Awakening: Predicting external stimulation to force transitions between different brain states]]>>。
+
+[img[LEiDA.png]]
+
+# 使用标准 FSL 工具<<tc "（操作 fMRI 数据的软件包）" "blue">>，提取自动解剖标记<<tc "（AAL）" "blue">>图谱中定义的感兴趣脑区（<<tc "ROI" "blue">>，$$N=90$$）的 BOLD 信号，并对其预处理和取平均；
+# 对每个 ROI 脑区，对平均 BOLD 序列（$$1\times T$$ 复数）做希尔伯特变换，得到区域信号的相位演变<<tc "（解析信号）" "red">>；
+# 计算 BOLD 相位信号的相干矩阵（即<<tc "动态功能连接性（dFC）矩阵" "blue">>，维数 $$N\times N\times T$$，其中 $$T$$ 为<<tc "所有会话中获取的图像体积（volume）数，例如时间" "blue">>），得到节点之间的相位差余弦<<tc "（值为 1 表示完全同步，值为 -1 表示完全反向变化；矩阵具有对称性）" "red">>；
+# 提取每个 dFC 矩阵的主特征向量（<<tc "特征值最大的特征向量" "blue">>，维数 $$N\times 1$$），在<<hl "时间点和受试者" "cyan">>之间 K-means 聚类；<br />（直接对所有时刻的 dFC 矩阵聚类也可以估计亚稳态。）<br /><<tc "（使用主特征向量降维，显著提高信噪比，增强聚类可靠性；因为 dFC 矩阵是对角线对称的，主特征向量能捕捉主要同步模式，并可以通过外积重建 dFC 矩阵。）" "red">>
+
+!!! 结果
+
+可以检测离散的 dFC 模式，<<hl "聚类中心用以定义「亚稳定子状态」" "pink">>。再计算亚稳态的出现概率和转移概率得到完整的 PMS 空间。
+
+<<tc "（任意时刻，大脑的 BOLD 处于某个特定的聚类，也即某个亚稳定子状态。聚类中心表征频繁出现且稳定的同步/连接模式。）" "red">>

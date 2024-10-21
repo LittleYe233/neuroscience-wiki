@@ -1,0 +1,14 @@
+abbr: 
+chinese-translation: 霍普夫分岔
+created: 20241021161516345
+creator: LittleYe233
+modified: 20241021161651095
+modifier: LittleYe233
+reference-url: https://en.wikipedia.org/wiki/Hopf_bifurcation
+tags: Terms Mathematics
+title: Hopf Bifurcation
+type: text/vnd.tiddlywiki
+
+在数学的分岔理论中，霍普夫分岔（Hopf bifurcation）是指系统的稳定性发生变化形成一个周期极限环的临界点。准确来说，它是动力学系统局域的分岔，局部的一个稳定不动点失稳的过程，在线性稳定性分析中表现为该不动点附近的线性矩阵出现两个共轭复数特征值。在满足一般合理的前提下，霍普夫分岔都会形成一个小辐的极限环。
+
+[img[https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Hopfbifurcation.png/2560px-Hopfbifurcation.png]]
