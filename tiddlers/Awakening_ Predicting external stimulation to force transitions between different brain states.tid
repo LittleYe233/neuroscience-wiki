@@ -17,7 +17,7 @@ bibtex-volume: 116
 bibtex-year: 2019
 created: 20241021135239779
 creator: LittleYe233
-modified: 20241021161507115
+modified: 20241022024353412
 modifier: LittleYe233
 tags: Papers
 title: Awakening: Predicting external stimulation to force transitions between different brain states
@@ -26,3 +26,9 @@ type: text/vnd.tiddlywiki
 !! 总结
 
 本文从用亚稳态定义大脑状态出发，指出大脑状态是一种广泛传播网络的动态持续演变，是条件依赖的自组织行为，历经稳态、准稳态、高低活动状态和瞬态排列。大脑状态曾被描述为吸引子和生成模型，但都在未能捕获亚稳态概念上产生局限。文章提出概率亚稳定子状态（PMS）的概念，其被认为是常规且持久的大脑状态的随机划分，继而可以令生成式全脑模型拟合不同状态的 PMS 空间并用模拟刺激触发外部强制状态转变，以解决大脑如何切换状态的问题。从结果上，对全脑模型和 PMS 空间的分析包含三个部分：首先，使用主特征向量动态分析（[[LEiDA|Leading Eigenvector Dynamics Analysis]]）方法识别亚稳态，并结合其发生概率和转移概率组成 PMS 空间；其次，用超临界 [[Hopf 分岔|Hopf Bifurcation]]模型描述大脑网络节点，组成大脑大规模模型，并用其拟合经验/实验数据 PMS 空间；最后，用有效连接性（[[Effective Connectivity]]）细调全脑模型的结构连接，优化全脑模型。文章同时指出强制大脑状态转换的机制是对全脑模型施加不同刺激，改变节点的 Hopf 分岔参数来实现。
+
+!! 摘要
+
+大脑状态被定义为亚稳定子状态（metastable substates）。这包含了概率稳定性和发生概率（occurrence），并被生成式全脑模型拟合。
+
+大脑状态可用于发现刺激目标和选择连接样式（pattern），后者被确保 DES<<tc "（直接电刺激）" "blue">>诱导神经兴奋的传播，从而 create awakenings from complex cases of brain injury。
