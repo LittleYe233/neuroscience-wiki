@@ -1,0 +1,12 @@
+abbr: 
+chinese-translation: 轮廓系数
+created: 20241022030940938
+creator: LittleYe233
+modified: 20241022031033855
+modifier: LittleYe233
+reference-url: https://en.wikipedia.org/wiki/Silhouette_(clustering)
+tags: Terms Mathematics
+title: Silhouette Coefficient
+type: text/vnd.tiddlywiki
+
+表征样本被划分到当前簇是否合理。所有样本的平均轮廓系数表征聚类的好坏。

@@ -1,12 +1,20 @@
-abbr: LEiDA
-chinese-translation: 主特征向量动态分析
-created: 20241021150856518
+created: 20241022030930884
 creator: LittleYe233
+list: [[Leading Eigenvector Dynamics Analysis]]
 modified: 20241022030930888
 modifier: LittleYe233
-reference-url: https://www.nature.com/articles/s41598-017-05425-7
-tags: Terms Framework
-title: Leading Eigenvector Dynamics Analysis
+rev-abbr: LEiDA
+rev-bag: default
+rev-chinese-translation: 主特征向量动态分析
+rev-created: 20241021150856518
+rev-creator: LittleYe233
+rev-modified: 20241022014505765
+rev-modifier: LittleYe233
+rev-reference-url: https://www.nature.com/articles/s41598-017-05425-7
+rev-revision: 9
+rev-tags: Terms Framework
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241022.11:10:26
 type: text/vnd.tiddlywiki
 
 !! 工作流程
@@ -18,7 +26,7 @@ type: text/vnd.tiddlywiki
 # 使用标准 FSL 工具<<tc "（操作 fMRI 数据的软件包）" "blue">>，提取自动解剖标记<<tc "（AAL）" "blue">>图谱中定义的感兴趣脑区（<<tc "ROI" "blue">>，$$N=90$$）的 [[BOLD|Blood-oxygen-level-dependent Imaging]] 信号，并对其预处理和取平均；
 # 对每个 ROI 脑区，对平均 BOLD 序列（$$1\times T$$ 复数）做希尔伯特变换，得到区域信号的相位演变<<tc "（解析信号）" "red">>；
 # 计算 BOLD 相位信号的相干矩阵（即<<tc "动态功能连接性（dFC）矩阵" "blue">>，维数 $$N\times N\times T$$，其中 $$T$$ 为<<tc "所有会话中获取的图像体积（volume）数，例如时间" "blue">>），得到节点之间的相位差余弦<<tc "（值为 1 表示完全同步，值为 -1 表示完全反向变化；矩阵具有对称性）" "red">>；
-# 提取每个 dFC 矩阵的主特征向量（<<tc "特征值最大的特征向量，表示对应 ROI 在大脑同步模式上的贡献" "blue">>，维数 $$N\times 1$$），在<<hl "时间点和受试者" "cyan">>之间 K-means 聚类（根据多种标准（例如[[轮廓系数|Silhouette Coefficient]]），$$k=3$$）；<br />（直接对所有时刻的 dFC 矩阵聚类也可以估计亚稳态。）<br /><<tc "（使用主特征向量降维，显著提高信噪比，增强聚类可靠性；因为 dFC 矩阵是对角线对称的，主特征向量能捕捉主要同步模式，并可以通过外积重建 dFC 矩阵。）" "red">>
+# 提取每个 dFC 矩阵的主特征向量（<<tc "特征值最大的特征向量" "blue">>，维数 $$N\times 1$$），在<<hl "时间点和受试者" "cyan">>之间 K-means 聚类；<br />（直接对所有时刻的 dFC 矩阵聚类也可以估计亚稳态。）<br /><<tc "（使用主特征向量降维，显著提高信噪比，增强聚类可靠性；因为 dFC 矩阵是对角线对称的，主特征向量能捕捉主要同步模式，并可以通过外积重建 dFC 矩阵。）" "red">>
 
 !!! 结果
 
