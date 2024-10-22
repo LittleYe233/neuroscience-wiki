@@ -1,7 +1,7 @@
-created: 20241022040430099
+created: 20241022081159231
 creator: LittleYe233
 list: [[Awakening: Predicting external stimulation to force transitions between different brain states]]
-modified: 20241022040430115
+modified: 20241022081159247
 modifier: LittleYe233
 rev-bag: default
 rev-bibtex-abstract: A fundamental problem in systems neuroscience is how to force a transition from one brain state to another by external driven stimulation in, for example, wakefulness, sleep, coma, or neuropsychiatric diseases. This requires a quantitative and robust definition of a brain state, which has so far proven elusive. Here, we provide such a definition, which, together with whole-brain modeling, permits the systematic study in silico of how simulated brain stimulation can force transitions between different brain states in humans. Specifically, we use a unique neuroimaging dataset of human sleep to systematically investigate where to stimulate the brain to force an awakening of the human sleeping brain and vice versa. We show where this is possible using a definition of a brain state as an ensemble of “metastable substates,” each with a probabilistic stability and occurrence frequency fitted by a generative whole-brain model, fine-tuned on the basis of the effective connectivity. Given the biophysical limitations of direct electrical stimulation (DES) of microcircuits, this opens exciting possibilities for discovering stimulation targets and selecting connectivity patterns that can ensure propagation of DES-induced neural excitation, potentially making it possible to create awakenings from complex cases of brain injury.
@@ -23,12 +23,12 @@ rev-bibtex-volume: 116
 rev-bibtex-year: 2019
 rev-created: 20241021135239779
 rev-creator: LittleYe233
-rev-modified: 20241022035453476
+rev-modified: 20241022081038657
 rev-modifier: LittleYe233
-rev-revision: 14
+rev-revision: 16
 rev-tags: Papers
 rev-type: text/vnd.tiddlywiki
-title: $:/rev/20241022.11:10:59
+title: $:/rev/20241022.16:10:48
 type: text/vnd.tiddlywiki
 
 !! 总结
@@ -134,3 +134,7 @@ node [shape=box];
 刺激：<<tc "改变 Hopf 分岔模型的分岔参数" "blue">>
 
 ''多区域弱刺激''：贪婪策略，每个新条件下，让已确定最佳脑区继续刺激，继续寻找其余脑区中的最佳组合。
+
+!! 手写笔记
+
+<<slider label:"手写笔记" src:"Awakening: Predicting external stimulation to force transitions between different brain states/WrittenNotes">>
