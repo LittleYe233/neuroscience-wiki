@@ -1,0 +1,89 @@
+created: 20241022130456599
+creator: LittleYe233
+modified: 20241022131913249
+modifier: LittleYe233
+tags: 
+title: Transcutaneous auricular vagus nerve stimulation in treating major depressive disorder/Body
+type: text/vnd.tiddlywiki
+
+!! 摘要
+
+taVNS 潜在益处上不明确。
+
+大体上降低诸多量表得分，可以有效改善 MDD 症状。
+
+!! 引言
+
+* 药物治疗（抗药性）
+* 心理治疗
+* 神经刺激（VNS、DBS 等，需要手术植入，有感染等副作用）
+
+!! 方法
+!!! 搜索策略
+
+数据库搜索关键词。
+
+!!! 选择和排除标准
+
+受试者被诊断 MDD，使用 taVNS 对照非 taVNS 或安慰剂，随机对照或非随机对照。
+
+!!! 数据提取和质量评估
+
+''评估方法学质量（methodological quality）''：
+
+* Cochrane 偏倚风险工具（risk of bias tool）
+* ROBINS-I 偏倚工具
+
+!!! 结果指标
+
+* 主要量表
+** 24 项汉密尔顿抑郁量表（HAMD）
+** 抑郁自评量表（SDS）
+** Beck 抑郁量表（BDI）
+* 次要量表
+** 汉密尔顿焦虑量表（HAMA）
+** 焦虑自评量表（SAS）
+
+!!! 统计学分析
+
+分析指标主要为 MD（标准差），基于 CI（置信区间）=95%。使用 I-square（I^^2^^）评估异质性。
+
+''发表偏倚（publication bias）的衡量''：漏斗图（funnel plot）、Egger's 检验
+
+!! 结果
+!!! 选中的研究的质量评估
+
+| 研究 | 是否为随机对照 | Bias 评估 |h
+| Hein, E, 2013 | RCT | Blinding of participants and personnel: High risk of bias |
+| Rong, P.J., 2016 | Non-RCT | Bias in Selection of the Reported Result: Moderate |
+| Tu, Y.H., 2018 | Non-RCT | Bias in Selection of the Reported Result: Moderate |
+
+!!! 结果分析
+
+* Hein, E, 2013
+** HAMD：不显著
+** BDI：显著
+* Rong, P.J., 2016 和 Tu, Y.H., 2018
+** HAMD：显著
+** SDS：显著
+** HAMA：不显著
+** SAS：显著
+
+!!! 副作用
+
+taVNS 和假 taVNS 组各有极少数报告轻微耳鸣，但在结束刺激后很快自行康复。无其他不良结果。
+
+!! 讨论
+!!! 结果的摘要
+
+taVNS 显著降低 HAMD、SDS、SAS、BDI 评分，对 HAMA 不显著。被认为治疗 MDD 有效，更安全且副作用更少。
+
+!!! 局限性
+
+* 大多为 non-RCT，仅有一项小样本 RCT；
+* 未对治疗师/结果评估者进行盲选处理；
+* 仅一项研究报告随访调查。
+
+!! 结论
+
+需要更多设计良好、大样本、具备随访的 RCT 支持结果。
