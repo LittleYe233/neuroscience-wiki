@@ -1,0 +1,18 @@
+abbr: BOLD Imaging
+chinese-translation: 血氧水平依赖成像
+created: 20241022014516706
+creator: LittleYe233
+modified: 20241022014812918
+modifier: LittleYe233
+reference-url: https://en.wikipedia.org/wiki/Blood-oxygen-level-dependent_imaging
+tags: Terms [[Imaging Technique]]
+title: Blood-oxygen-level-dependent Imaging
+type: text/vnd.tiddlywiki
+
+血氧水平依赖成像（BOLD对比成像）是一种用于功能性磁共振成像（fMRI）的方法，用来观察大脑或其他器官在特定时间内处于活跃状态的不同区域。
+
+!! 理论
+
+神经元没有内部的糖和氧储备，因此它们的放电会迅速引发对更多能量的需求。通过称为血流动力学反应的过程，血液会以更高的速度向活跃的神经元释放氧气，而非活跃的神经元则接收较少的氧气。这导致氧合血红蛋白和去氧血红蛋白（即含氧血液和缺氧血液）相对水平的变化，这可以基于它们的不同磁敏感性进行检测。
+
+1990年，小川诚司及其同事发表了三篇论文，表明血红蛋白在氧合和去氧状态下具有不同的磁性（去氧血红蛋白为顺磁性，氧合血红蛋白为抗磁性），两者都可以通过MRI检测到。这会导致磁信号的变化，能够通过MRI扫描仪检测。通过对某一思想、动作或体验进行多次重复，可以使用统计方法来确定大脑中哪些区域在这些活动期间显著显示出这种差异，从而识别出在该思想、动作或体验中最活跃的大脑区域。
