@@ -1,7 +1,7 @@
-created: 20241022024353406
+created: 20241022032005498
 creator: LittleYe233
 list: [[Awakening: Predicting external stimulation to force transitions between different brain states]]
-modified: 20241022024353411
+modified: 20241022032005506
 modifier: LittleYe233
 rev-bag: default
 rev-bibtex-abstract: A fundamental problem in systems neuroscience is how to force a transition from one brain state to another by external driven stimulation in, for example, wakefulness, sleep, coma, or neuropsychiatric diseases. This requires a quantitative and robust definition of a brain state, which has so far proven elusive. Here, we provide such a definition, which, together with whole-brain modeling, permits the systematic study in silico of how simulated brain stimulation can force transitions between different brain states in humans. Specifically, we use a unique neuroimaging dataset of human sleep to systematically investigate where to stimulate the brain to force an awakening of the human sleeping brain and vice versa. We show where this is possible using a definition of a brain state as an ensemble of “metastable substates,” each with a probabilistic stability and occurrence frequency fitted by a generative whole-brain model, fine-tuned on the basis of the effective connectivity. Given the biophysical limitations of direct electrical stimulation (DES) of microcircuits, this opens exciting possibilities for discovering stimulation targets and selecting connectivity patterns that can ensure propagation of DES-induced neural excitation, potentially making it possible to create awakenings from complex cases of brain injury.
@@ -23,12 +23,12 @@ rev-bibtex-volume: 116
 rev-bibtex-year: 2019
 rev-created: 20241021135239779
 rev-creator: LittleYe233
-rev-modified: 20241022022111795
+rev-modified: 20241022030528331
 rev-modifier: LittleYe233
-rev-revision: 9
+rev-revision: 12
 rev-tags: Papers
 rev-type: text/vnd.tiddlywiki
-title: $:/rev/20241022.10:10:46
+title: $:/rev/20241022.11:10:26 1
 type: text/vnd.tiddlywiki
 
 !! 总结
@@ -40,3 +40,29 @@ type: text/vnd.tiddlywiki
 大脑状态被定义为亚稳定子状态（metastable substates）。这包含了概率稳定性和发生概率（occurrence），并被生成式全脑模型拟合。
 
 大脑状态可用于发现刺激目标和选择连接样式（pattern），后者被确保 DES<<tc "（直接电刺激）" "blue">>诱导神经兴奋的传播，从而 create awakenings from complex cases of brain injury。
+
+!! 引言
+
+<$viz text='digraph ComplexDynamicSystems {
+rankdir=LR;
+node [shape=box];
+{Neurons, Synapses, "Nested recursive circuits", "Initial condition-dependent activity evolution"} -> "Complex dynamic systems"
+}' />
+
+Complex：<<tc "无法只通过基本节点理解全局" "red">>
+
+大脑状态是一个广泛传播网络的动态持续演变（a continuously evolving dynamics of such widespread networks）。
+
+''特征''：条件依赖的自组织，<<hl "历经稳态、准稳态、高低活动状态和瞬态排列" "palegreen">>。
+
+使用例如神经影像数据、定义状态空间的方法降低复杂性。后者使用随时间滑动的窗口估算选定的时空和频谱特征之间的关系。
+
+<<tc "局限：未能捕捉到状态及其转换时的动态。" "red">>
+
+状态可以描述为''吸引子''（attractor）——不同脑区相互作用后的稳态，或''生成模型''——考虑不同层级处理水平上的依赖<<hl "上下文" "pink">>和<<hl "顺序（rank）" "pink">>的约束。神经活动振荡<<tc "耦合" "red">>的程度反映区域间的相互作用。
+
+<<tc "局限：未捕获亚稳态的概念。" "red">><<tc "（亚稳态：受轻微扰动仍然暂时保持现有平衡。）" "blue">>
+
+由此，引出''概率亚稳定子状态''（PMS），描述常规且持久的大脑状态的随机<<tc "划分" "red">>。
+
+大脑如何切换状态？需要''大脑状态的构成''（例如 PMS）和''驱动 transition 的机制''。（生成式）全脑模型将功能动态和解剖结构相关联，拟合不同状态的 PMS 空间。对其施加模拟刺激可以外部强制 transition。

@@ -17,7 +17,7 @@ bibtex-volume: 116
 bibtex-year: 2019
 created: 20241021135239779
 creator: LittleYe233
-modified: 20241022030528331
+modified: 20241022040430117
 modifier: LittleYe233
 tags: Papers
 title: Awakening: Predicting external stimulation to force transitions between different brain states
@@ -58,3 +58,81 @@ Complex：<<tc "无法只通过基本节点理解全局" "red">>
 由此，引出''概率亚稳定子状态''（PMS），描述常规且持久的大脑状态的随机<<tc "划分" "red">>。
 
 大脑如何切换状态？需要''大脑状态的构成''（例如 PMS）和''驱动 transition 的机制''。（生成式）全脑模型将功能动态和解剖结构相关联，拟合不同状态的 PMS 空间。对其施加模拟刺激可以外部强制 transition。
+
+!! 结果
+
+PMS 空间被用于量化大脑状态底层动态的特征（quantify characterization of the dynamics underlying brain states）。它被全脑模型拟合，后者离线（offline）寻找最优刺激。
+
+!!! 识别 PMS 空间
+
+参见 [[Leading Eigenvector Dynamics Analysis]]。
+
+''框架''：表征大脑状态，使用全脑模型生成/拟合<<tc "（调整自由参数（解剖纤维的有效导电性），联系结构（dMRI）和功能（fMRI））" "blue">>，施加刺激模拟强制 transition。
+
+<<tc "拟合效果度量：对称相对熵" "red">>
+
+!!! WBM 到 PMS 空间的最佳时空拟合
+
+大脑大规模模型由节点（局部脑区，<<tc "可被描述成超临界 Hopf 分岔" "red">>）及其之间的连接<<tc "（受解剖连接矩阵限制，包含耦合强度的参数，可根据 PMS 空间优化）" "blue">>组成。解剖连接矩阵/结构连接性可由 dMRI 或 tractography<<tc "（束流成像）" "blue">>获得。
+
+[img[BrainHopfBifurcation.png]]
+
+''拟合策略''：用经验/实验数据的聚类中心定义亚稳定子状态。基于上述，计算模型的概率。
+
+''Figure 3A/C''：全脑模型拟合清醒状态
+
+<<hl "参数 G" "cyan">>：控制区域间的耦合程度，决定<<hl "结构连接中纤维的密度（轴突导电性）" "cyan">>
+
+<div style="color: blue">
+参数 G 只用单一实数，是考虑到
+
+<ul>
+<li>降低模型复杂性；</li>
+<li>在假设长程连接中的轴突导电性都均匀的情形下，可以作统一的缩放。</li>
+</ul>
+
+参数 G 并非直接改变神经元的物理连接，而是模拟长程连接的有效性，反映功能连接的可变性（连接的利用率和效率）。
+</div>
+
+''拟合指标''
+
+* （基于相位相干性）功能连接性动力学<<hl "（FCD）" "cyan">>
+** <<tc "dFC 矩阵上三角元素" "blue">>
+** <<tc "Kolmogorov-Smirnov 检验" "blue">><<tc "（比较两个分布之间的相同性）" "pink">>
+* 经验 PMS 空间<<tc "（计算经验概率与模拟概率之间的对称相对熵）" "blue">>
+
+结果上，从相对熵和 Markov 熵距离来看，均为 PMS 优于 FCD。
+
+''Figure 3B''：TPM 对角线元素很大，反映大脑子状态的亚稳态特性。
+
+!!! 用有效连接性（Effective Connectivity）优化全脑模型
+
+<<tc "在全局耦合参数最佳拟合的基础上，用 EC 作进一步精细调整。" "red">>
+
+''策略''
+
+# 计算模型与经验平均相位相干矩阵之间的距离；
+# <<tc "梯度下降" "red">>，分别调整每个结构连接；
+# 重复运行，递归更新 EC 直到收敛。
+
+!!! Awakening: Forcing a Brain State Transition
+
+<$viz text='digraph Awakening {
+rankdir=LR;
+node [shape=box];
+源状态 -> "WBM 施加不同刺激" -> "不同状态" -> 与目标状态比较
+}' />
+
+刺激：<<tc "改变 Hopf 分岔模型的分岔参数" "blue">>
+
+''多区域弱刺激''：贪婪策略，每个新条件下，让已确定最佳脑区继续刺激，继续寻找其余脑区中的最佳组合。
+
+!! 手写笔记
+
+[img[Awakening1.jpg]]
+[img[Awakening2.jpg]]
+[img[Awakening3.jpg]]
+[img[Awakening4.jpg]]
+[img[Awakening5.jpg]]
+[img[Awakening6.jpg]]
+[img[Awakening7.jpg]]
