@@ -1,18 +1,26 @@
-abbr: slMFB
-chinese-translation: 内侧前脑束的外上支
-created: 20241024035755326
+created: 20241024084058282
 creator: LittleYe233
-modified: 20241024084058286
+list: [[Superolateral Branch of the Medial Forebrain Bundle]]
+modified: 20241024084058285
 modifier: LittleYe233
-reference-url: https://en.wikipedia.org/wiki/Medial_forebrain_bundle
-tags: Terms
-title: Superolateral Branch of the Medial Forebrain Bundle
+rev-abbr: slMFB
+rev-bag: default
+rev-chinese-translation: 内侧前脑束的外上支
+rev-created: 20241024035755326
+rev-creator: LittleYe233
+rev-modified: 20241024040138328
+rev-modifier: LittleYe233
+rev-reference-url: https://en.wikipedia.org/wiki/Medial_forebrain_bundle
+rev-revision: 1
+rev-tags: Terms
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241024.16:10:41
 type: text/vnd.tiddlywiki
 
 是内侧前脑束（[[Medial Forebrain Bundle]], MFB）的一个重要分支。
 
 * 解剖学特点：
-** slMFB 连接了中脑的''腹侧被盖区''（[[Ventral Tegmental Area]], VTA）、''伏隔核''（[[Nucleus Accumbens]], NAcc）、''边缘系统''，以及''前额叶皮层''等区域。
+** slMFB 连接了中脑的''腹侧被盖区''（ventral tegmental area, VTA）、''伏隔核''（[[Nucleus Accumbens]], NAcc）、''边缘系统''，以及''前额叶皮层''等区域。
 ** VTA 是多巴胺神经元的主要来源，这些多巴胺神经元通过 slMFB 投射到伏隔核和其他大脑区域，从而调节奖励和情感。
 ** slMFB 在垂直和外侧方向传递信息，因此称为“superolateral”（外上支），负责连接大脑中的多个纵深结构。
 * 功能特点：
