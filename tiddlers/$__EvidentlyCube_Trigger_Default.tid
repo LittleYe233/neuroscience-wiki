@@ -1,0 +1,14 @@
+auto-trigger-input: 1
+auto-trigger-textarea: 1
+caption: Default
+created: 20241024063509905
+creator: e
+display-filter: [<currentTiddler>]
+filter: [all[tiddlers]!is[system]!is[draft]search:title<query>]
+modified: 20241024073126626
+modifier: LittleYe233
+tags: $:/tags/EC/AutoComplete/Trigger
+template: [[$option$]]$caret$
+title: $:/EvidentlyCube/Trigger/Default
+trigger: [[
+type: text/vnd.tiddlywiki
