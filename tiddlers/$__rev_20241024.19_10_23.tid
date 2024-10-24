@@ -1,9 +1,17 @@
-created: 20241016162719106
+created: 20241024114813239
 creator: LittleYe233
-modified: 20241024114813246
+list: [[My Neuroscience Wiki]]
+modified: 20241024114813245
 modifier: LittleYe233
-tags: 
-title: My Neuroscience Wiki
+rev-bag: default
+rev-created: 20241016162719106
+rev-creator: LittleYe233
+rev-modified: 20241024114537515
+rev-modifier: LittleYe233
+rev-revision: 1
+rev-tags: 
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241024.19:10:23
 type: text/vnd.tiddlywiki
 
 这是一个关于神经科学 (Neuroscience) 的个人学习的 Wiki, 以术语解释为主.
@@ -24,4 +32,4 @@ Filter and search in table <$edit-text tiddler="$:/temp/dtable/search/papers" fi
 
 Filter and search in table <$edit-text tiddler="$:/temp/dtable/search/articles" filed=text tag=input default=""/> <$button class=<<tv-config-toolbar-class>> set="$:/temp/dtable/search/articles" setTo="" tooltip="clear searchbox">{{$:/core/images/refresh-button}}</$button>
 
-<$macrocall $name=table-dynamic filter="[tag[Articles]!is[draft]search:title,caption,tags,text:some{$:/temp/dtable/search/articles}]" class="w-100" fields="title tags"  caption="''ALL Articles''"/>
+<$macrocall $name=table-dynamic filter="[tag[Articles]!is[draft]search:title,caption,tags:some{$:/temp/dtable/search/articles}]" class="w-100" fields="title tags"  caption="''ALL Articles''"/>

@@ -1,9 +1,9 @@
 created: 20240905133214335
 creator: e
-modified: 20241024103617831
+modified: 20241024112350276
 modifier: LittleYe233
 tags: $:/tweaks/cth
 title: $:/tweaks/cth/StoryLeft
 type: text/vnd.tiddlywiki
 
-0px
+{{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}}
