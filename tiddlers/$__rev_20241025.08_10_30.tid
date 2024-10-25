@@ -1,0 +1,23 @@
+created: 20241025000333370
+creator: LittleYe233
+list: [[使用 Matlab/EEGLAB 分析脑电数据]]
+modified: 20241025000333372
+modifier: LittleYe233
+rev-bag: default
+rev-created: 20241024130037529
+rev-creator: LittleYe233
+rev-modified: 20241024130845672
+rev-modifier: LittleYe233
+rev-revision: 2
+rev-tags: Articles EEG Neuroimaging
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241025.08:10:30
+type: text/vnd.tiddlywiki
+
+!! 安装 EEGLAB
+
+下载地址：https://sccn.ucsd.edu/eeglab/download.php
+
+下载完成后，将工具包文件夹复制到任意位置（例如 ``MATLAB/版本号/toolbox``），启动 MATLAB，主页->环境->设置路径，定位到工具包文件夹。在命令行窗口输入 ``eeglab`` 执行打开 EEGLAB。
+
+[img[EEGLAB_mainscreen.png]]
