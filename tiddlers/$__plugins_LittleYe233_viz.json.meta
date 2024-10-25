@@ -1,0 +1,12 @@
+created: 20241025150000000
+creator: LittleYe233
+dependents: 
+description: Plugin for graphviz, upgraded
+list: Usage Readme
+modified: 20241025084308342
+modifier: LittleYe233
+name: Viz
+plugin-type: plugin
+title: $:/plugins/LittleYe233/viz
+type: application/json
+version: 2.0.2
