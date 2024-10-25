@@ -1,0 +1,87 @@
+created: 20241025010709632
+creator: LittleYe233
+list: [[使用 Matlab/EEGLAB 分析脑电数据]]
+modified: 20241025010709642
+modifier: LittleYe233
+rev-bag: default
+rev-created: 20241024130037529
+rev-creator: LittleYe233
+rev-modified: 20241025010354081
+rev-modifier: LittleYe233
+rev-revision: 5
+rev-tags: Articles EEG Neuroimaging
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241025.09:10:55
+type: text/vnd.tiddlywiki
+
+!! 安装 EEGLAB
+
+下载地址：https://sccn.ucsd.edu/eeglab/download.php
+
+下载完成后，将工具包文件夹复制到任意位置（例如 ``MATLAB/版本号/toolbox``），启动 Matlab，``主页 -> 环境 -> 设置路径``，定位到工具包文件夹。在命令行窗口输入 ``eeglab`` 执行打开 EEGLAB。
+
+[img[EEGLAB_mainscreen.png]]
+
+!! 准备工作
+
+点击 ``File -> Manage EEGLAB extensions``，安装 ERPLAB 插件。
+
+[img[EEGLAB_install_ERPLAB.png]]
+
+!! 数据预处理
+
+!!! 导入数据
+
+点击 ``File -> Import data -> Using EEGLAB functions and plugins -> From Neuroscan .CNT file`` 导入数据，在打开的窗口使用默认设置，并给数据集命名，然后保存为 *.set 数据集文件方便使用。观察数据集相关信息如下图所示：
+
+[img[EEGLAB_import_dataset.png]]
+
+!!! 添加电极定位
+
+点击 ``Edit -> Channel locations``，打开的窗口使用默认设置，点击“Ok”。
+
+[img[EEGLAB_channel_locations_0.png]]
+
+[img[EEGLAB_channel_locations.png]]
+
+点击 ``Plot -> Channel locations -> By name``，查看电极定位图：
+
+[img[EEGLAB_channel_location_plot.png]]
+
+此时主界面上 Channel locations 已经变成 Yes。
+
+!!! 设置重参考
+
+点击 ``Tools -> Re-reference the data``，因为没有合适的参考频道，故使用平均参考：
+
+[img[EEGLAB_reference.png]]
+
+可以在此时保存新的数据集方便使用。此时主界面的 Reference 已经变为 average。
+
+!!! 滤波
+
+我们需要滤除较低频率分量包含直流分量，以及滤除 48~52Hz 的频率分量（''功频干扰''？）。点击 ``Tools -> Filter the data -> Basic FIR filter (new，default)``，在“Lower edge of the frequency pass band”里输入“0.4”滤除低频分量，在“Higher edge of the frequency pass band”里输入“48”滤除高频分量，点击“Ok”。此时 EEGLAB 会绘制滤波器的幅频和相频特性曲线，观察到与我们的预期一致。
+
+[img[EEGLAB_filter.png]]
+
+此时可以保存数据集。
+
+!!! 去除杂段
+
+点击 ``Plot -> Channel data (scroll)``，绘制 EEG 波形，界面如下图所示。
+
+[img[EEGLAB_channel_data_scroll.png]]
+
+图中已经标记出各个时刻对应的事件类型。手动去除杂乱的波段并“REJECT”。
+
+!!! ICA 分解数据
+
+点击 ``Tools -> Decompose data by ICA``，使用默认的“Extended Infomax”算法，点击“Ok”。
+
+[img[EEGLAB_runica.png]]
+
+如果后续弹出数据矩阵的秩与通道数不一致的窗口，直接点击“Ok”即可。
+
+此时打开 Matlab 命令行窗口，可以看到后台正在执行 ``runica()`` 函数。预计会执行 400 个左右的 steps。
+
+[img[EEGLAB_runica_cmd_window.png]]
