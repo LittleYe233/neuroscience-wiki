@@ -1,0 +1,111 @@
+created: 20241025083616495
+creator: LittleYe233
+list: [[Brain States and Transitions: Insights from Computational Neuroscience/Body]]
+modified: 20241025083616506
+modifier: LittleYe233
+rev-bag: default
+rev-created: 20241025063252924
+rev-creator: LittleYe233
+rev-modified: 20241025083021387
+rev-modifier: LittleYe233
+rev-revision: 0
+rev-tags: 
+rev-type: text/vnd.tiddlywiki
+title: $:/rev/20241025.16:10:39
+type: text/vnd.tiddlywiki
+
+!! 摘要
+
+大脑存在状态（wakefulness, sleep, anesthesia, etc.）
+
+''论文结构''：
+
+* 最新进展（state of the art）
+* 框架：确定描述任意大脑状态的功能分层结构
+* 全脑计算模型（可以计算机模拟）
+
+!! 引言
+
+Brain states consist of <<hl "widespread network" "cyan">> dynamics.
+
+<!-- 这里有一个问题，如果在这里插入 GraphViz，后面的文字无法渲染。不知道为什么。 -->
+
+widespread network：
+
+<div style="color: blue;">
+<ul>
+<li>依赖条件的自组织过程</li>
+<li>稳态 -> 准稳态（quasi-stable）-> 高低活动状态 -> 瞬态排列</li>
+</ul>
+</div>
+
+如何从影像中识别？Capture their whole-brain dynamics (time & space)
+
+现状：静息态网络，总体平均情况
+
+主要目标：最能反映模型能力并有意义总结数据特征的大脑状态定义识别方法
+
+<<tc "全脑模型尚未在临床中被充分利用。" "red">>
+
+''Figure 1: Classification''
+
+measures:
+
+* spikes: much faster sub-ms scale
+* LFP, EEG, [[MEG|Magnetoencephalography]]: fast temporal info, less localized spatial scale
+* [[fMRI|Functional Magnetic Resonance Imaging]]: sub-mm, <<hl "时域因血流受限" "pink">><<tc "（BOLD 信号有非神经性成分（运动、心跳等），需要预处理或提高时间分辨率）" "red">>
+* [[PET|Positron Emission Tomography]]: less pricise, measure neurotransmitter density
+
+model bridging gap:
+
+* [[Brain Songs]]
+* [[Microcircuits]]
+* whole-brain model
+
+!! Principles of Brain States Revealed by Whole-Brain Modeling
+
+<!--
+digraph neuroscience {
+    node [shape=box];
+
+    // Main connection
+    las -> "tract tracing";
+    las [shape="diamond", label=<link <font color="red">anatomical</font>&nbsp;structure<br />with <font color="red">functional</font>&nbsp;dynamics>];
+
+    // Approaches for tract tracing
+    "tract tracing" -> "dMRI" -> "HAVE PROBLEMS!";
+    "tract tracing" -> "probabilistic tractography" -> "HAVE PROBLEMS!";
+
+    "dMRI" [shape=ellipse];
+    "probabilistic tractography" [shape=ellipse];
+
+    "HAVE PROBLEMS!" [style=filled, fillcolor="red", fontcolor="white"];
+
+    // Problems and their connections with different colors and shapes
+    "HAVE PROBLEMS!" -> "too many steps and\ncomplicated procedure" [color=red, penwidth=2];
+    "HAVE PROBLEMS!" -> "potential errors" [color=red, penwidth=2];
+    "HAVE PROBLEMS!" -> "need decisions" [color=red, penwidth=2];
+    "HAVE PROBLEMS!" -> "fail to show all\nneuroanatomical pathways" [color=red, penwidth=2];
+
+    // Decisions branching from "need decisions"
+    node [shape=ellipse];
+    "need decisions" -> "local fiber\norientation modeling";
+    "need decisions" -> "integration\n& propagation";
+    "need decisions" -> "interpolation";
+    "need decisions" -> "seeding";
+    "need decisions" -> "masking";
+    "need decisions" -> "stopping\ncriteria";
+
+    // Connectivity
+    node [shape=box];
+
+    // Solution for failing to show all pathways
+    "fail to show all\nneuroanatomical pathways" -> mbe [color="blue", penwidth=2, label=<<font color="blue">Resolution</font>>];
+    mbe [label="model-based estimates\nof effective connectivity\n(functional -> anatomical)", style="filled", fillcolor="blue", fontcolor="white"]
+}
+-->
+
+[img[BrainStates_principles_of_brain_states.svg]]
+
+
+
