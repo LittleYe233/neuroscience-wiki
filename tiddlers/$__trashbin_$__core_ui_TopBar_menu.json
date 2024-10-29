@@ -1,0 +1,12 @@
+{
+    "title": "$:/core/ui/TopBar/menu",
+    "created": "20240905133357602",
+    "creator": "e",
+    "modified": "20241008133043468",
+    "modifier": "e",
+    "tags": "$:/tweaks/cth $:/tags/TopLeftBar",
+    "type": "text/vnd.tiddlywiki",
+    "text": "\\whitespace trim\n<$list filter=\"[[$:/state/sidebar]get[text]] +[else[yes]!match[no]]\" variable=\"ignore\">\n<$button set=\"$:/state/sidebar\" setTo=\"no\" tooltip={{$:/language/Buttons/HideSideBar/Hint}} aria-label={{$:/language/Buttons/HideSideBar/Caption}} class=\"tc-btn-invisible tc-hide-sidebar-btn\">{{$:/core/images/chevron-left}}\n<$action-setfield $tiddler=\"$:/tweaks/cth/StoryLeft\" text=\"0px\"/>\n</$button>\n</$list>\n<$list filter=\"[[$:/state/sidebar]get[text]] +[else[yes]match[no]]\" variable=\"ignore\">\n<$button set=\"$:/state/sidebar\" setTo=\"yes\" tooltip={{$:/language/Buttons/ShowSideBar/Hint}} aria-label={{$:/language/Buttons/ShowSideBar/Caption}} class=\"tc-btn-invisible tc-show-sidebar-btn\">{{$:/core/images/chevron-right}}\n<$action-setfield $tiddler=\"$:/tweaks/cth/StoryLeft\" text=\"{{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}}\"/>\n\n</$button>\n</$list>\n",
+    "revision": "0",
+    "bag": "default"
+}

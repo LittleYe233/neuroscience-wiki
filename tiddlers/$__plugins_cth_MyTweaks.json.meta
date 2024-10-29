@@ -1,0 +1,11 @@
+created: 20241029070108962
+creator: e
+description: MyTweaks
+modified: 20241029070108962
+modifier: e
+name: MyTweaks
+plugin-type: plugin
+source: $:/EvidentlyCube/Trigger/2
+title: $:/plugins/cth/MyTweaks
+type: application/json
+version: 0.0.1

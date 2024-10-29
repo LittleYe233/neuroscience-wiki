@@ -1,0 +1,18 @@
+{
+    "title": "$:/EvidentlyCube/Trigger/3",
+    "auto-trigger-input": "1",
+    "auto-trigger-textarea": "1",
+    "caption": "Link3",
+    "created": "20241024084947480",
+    "creator": "e",
+    "display-filter": "[<currentTiddler>]",
+    "filter": "[all[tiddlers]!is[system]!is[draft]search:title<query>]",
+    "modified": "20241024085008497",
+    "modifier": "e",
+    "tags": "$:/tags/EC/AutoComplete/Trigger",
+    "template": "$option$$caret$",
+    "trigger": "\\\\",
+    "type": "text/vnd.tiddlywiki",
+    "revision": "0",
+    "bag": "default"
+}

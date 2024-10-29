@@ -1,0 +1,168 @@
+created: 20241026021921194
+creator: LittleYe233
+modified: 20241029095236343
+modifier: LittleYe233
+tags: Articles Neuroimaging
+title: 使用 Matlab/spm12/NIfTI toolbox 读取 NICOM/NIfTI 图像
+type: text/vnd.tiddlywiki
+
+!! 读取 DICOM 图像
+
+!!! 元信息
+
+在命令行窗口执行 ``dicominfo('/path/to/dicom/file')``，结果类似如下：
+
+```text
+                                Filename: '/path/to/dicom/file'
+                             FileModDate: '16-8月-2017 15:35:13'
+                                FileSize: 192952
+                                  Format: 'DICOM'
+                           FormatVersion: 3
+                                   Width: 512
+                                  Height: 512
+                                BitDepth: 12
+                               ColorType: 'grayscale'
+          FileMetaInformationGroupLength: 174
+              FileMetaInformationVersion: [2×1 uint8]
+                 MediaStorageSOPClassUID: '1.2.840.10008.5.1.4.1.1.2'
+              MediaStorageSOPInstanceUID: '1.3.6.1.4.1.24930.72425494.2185.4889'
+                       TransferSyntaxUID: '1.2.840.10008.1.2.4.70'
+                  ImplementationClassUID: '1.3.6.1.4.1.24930.1'
+               ImplementationVersionName: 'DCMTK360_synedra'
+                    SpecificCharacterSet: 'ISO_IR 100'
+                               ImageType: 'ORIGINAL\PRIMARY\AXIAL\CT_SOM5 SPI'
+                             SOPClassUID: '1.2.840.10008.5.1.4.1.1.2'
+                          SOPInstanceUID: '1.3.6.1.4.1.24930.72425494.2185.4889'
+                               StudyDate: '20170809'
+                              SeriesDate: '20170809'
+                         AcquisitionDate: '20170809'
+                             ContentDate: '20170809'
+                               StudyTime: '151547.108000'
+                              SeriesTime: '152133.347000'
+                         AcquisitionTime: '152059.080397'
+                             ContentTime: '152059.080397'
+                                Modality: 'CT'
+                        StudyDescription: 'Vascular^3_NeuroDSACT (Adult)'
+                       SeriesDescription: 'HeadAngio  0.75  H10s'
+                             PatientName: [1×1 struct]
+                               PatientID: 'VAmZSvUPCykKEMciLEYjywtTkIFBAPxvrvqoJvjSbMooGFHnweXYbqtV'
+                        PatientBirthDate: '19630701'
+                              PatientSex: 'F'
+                      ContrastBolusAgent: 'APPLIED'
+                        BodyPartExamined: 'HEAD'
+                          SliceThickness: 0.7500
+                                     KVP: 110
+                  DataCollectionDiameter: 500
+                      DeviceSerialNumber: '77355'
+                        SoftwareVersions: 'syngo CT 2013A'
+                            ProtocolName: '3_NeuroDSACT'
+                     ContrastBolusVolume: 0
+                        ContrastFlowRate: 0
+                    ContrastFlowDuration: 0
+    ContrastBolusIngredientConcentration: 0
+                  ReconstructionDiameter: 252
+                DistanceSourceToDetector: 976.1000
+                 DistanceSourceToPatient: 535
+                      GantryDetectorTilt: 0
+                             TableHeight: 184
+                       RotationDirection: 'CW'
+                            ExposureTime: 600
+                         XRayTubeCurrent: 274
+                                Exposure: 182
+                              FilterType: '1'
+                          GeneratorPower: 31
+                              FocalSpots: 0.9500
+                   DateOfLastCalibration: '20170809'
+                   TimeOfLastCalibration: '021139.000000'
+                       ConvolutionKernel: 'H10s'
+                         PatientPosition: 'HFS'
+                  SingleCollimationWidth: 0.6000
+                   TotalCollimationWidth: 38.4000
+                    TableFeedPerRotation: 34.6000
+                       SpiralPitchFactor: 0.9000
+       ReconstructionTargetCenterPatient: [3×1 double]
+                  ExposureModulationType: 'Z_EC'
+                     EstimatedDoseSaving: 16.2319
+                                 CTDIvol: 29.2111
+                        StudyInstanceUID: '1.3.6.1.4.1.24930.07118107.5005.459'
+                       SeriesInstanceUID: '1.3.6.1.4.1.24930.35672565.9214.5218'
+                                 StudyID: '2346581481'
+                            SeriesNumber: 9
+                       AcquisitionNumber: 11
+                          InstanceNumber: 480
+                    ImagePositionPatient: [3×1 double]
+                 ImageOrientationPatient: [6×1 double]
+                     FrameOfReferenceUID: '1.3.12.2.1107.5.1.4.77355.30000017080817074508800005438'
+              PositionReferenceIndicator: ''
+                           SliceLocation: -160
+                           ImageComments: ''
+                         SamplesPerPixel: 1
+               PhotometricInterpretation: 'MONOCHROME2'
+                                    Rows: 512
+                                 Columns: 512
+                            PixelSpacing: [2×1 double]
+                           BitsAllocated: 16
+                              BitsStored: 12
+                                 HighBit: 11
+                     PixelRepresentation: 0
+                 SmallestImagePixelValue: 0
+                  LargestImagePixelValue: 3280
+                            WindowCenter: [2×1 double]
+                             WindowWidth: [2×1 double]
+                        RescaleIntercept: -1024
+                            RescaleSlope: 1
+            WindowCenterWidthExplanation: 'WINDOW1\WINDOW2'
+               RequestAttributesSequence: [1×1 struct]
+```
+
+双击右侧的 ``ans`` 变量可以查看更多信息。
+
+!! 读取 NIfTI 图像
+
+!!! 打开图像
+
+在命令行窗口执行 ``spm``，打开 spm12 的主界面。根据需要选择 PET、M/EEG 或 fMRI 图像。
+
+[img[spm_menu.png]]
+
+点击“Display”，在打开的窗口选中一个文件后点击“Done”，打开该图像。在一侧的窗口可以查看脑图像的不同切片。
+
+[img[spm_image.png]]
+
+!!! 标记指定脑区
+
+以左右侧海马体为例。首先我们需要知道每个大脑的部分的 ''编码''。在我做的实验中，左右海马体分别被标记为 75 和 76。其次我们需要有一个 label，用以标记每个脑区的位置。主要的原理是，通过在 label 中查找感兴趣的脑区（ROI），将其视作一个 ''Overlay''（或者可以看作掩码），然后就可以使用软件内置的功能标记脑区。
+
+参考代码如下：
+
+```matlab
+for i = 0:4
+    fname = sprintf('%d/label.nii', i);
+    label = load_untouch_nii(fname);
+    img = label.img;
+    vol = img .* 0;
+    % Hippo left: 75, Hippo right: 76
+    vol(img == 75) = 1;
+    vol(img == 76) = 1;
+    label.img = vol;
+    fname = sprintf('%d/hippo.nii', i);
+    save_untouch_nii(label, fname);
+end
+```
+
+上述代码的作用是，查找子文件夹中的 label，读取之后用 vol 打标记并生成一个对应的 nii 文件作为 overlay。
+
+然后，打开对应的原始图像，在观察脑切片图像的窗口下方有一个按钮“Add Overlay”，添加对应的 overlay，即可见到被标记的图像：
+
+[img[spm_image_overlay.png]]
+
+!!! 图像去噪
+
+SPM 工具包自带图像去噪功能。选中一张图片并打开，点击菜单页面右上角的“Smooth“进入平滑器设置界面——这使用的是高斯去噪。
+
+[img[spm_smooth.png]]
+
+其他设置可保持默认，最终原图和结果如下：
+
+[img[spm_smooth_original.png]]
+[img[spm_smooth_done.png]]

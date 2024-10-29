@@ -1,0 +1,12 @@
+{
+    "created": "20240905133214335",
+    "creator": "e",
+    "title": "$:/tweaks/cth/StoryLeft",
+    "bag": "default",
+    "modified": "20241029070901311",
+    "modifier": "LittleYe233",
+    "revision": "0",
+    "tags": "$:/tweaks/cth",
+    "text": "{{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}}",
+    "type": "text/vnd.tiddlywiki"
+}

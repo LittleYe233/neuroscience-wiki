@@ -1,0 +1,13 @@
+{
+    "title": "$:/tweaks/cth/MyStyle",
+    "created": "20221013060912950",
+    "creator": "PiggyRC",
+    "modified": "20241008133109999",
+    "modifier": "e",
+    "page-cover": "https://source.unsplash.com/random",
+    "tags": "$:/tweaks/cth $:/tags/Stylesheet",
+    "type": "text/vnd.tiddlywiki",
+    "text": ".tc-tiddler-frame textarea.tc-edit-texteditor {\n  -webkit-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);\n  -moz-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);\n  box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);\n}\n.katex-display {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.tc-tabbed-table-of-contents-content {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.tc-modal {\n  left: 10% !important;\n  right: 10% !important;\n  width: 80% !important;\n}\n\nh2, h3, h4, h5, h6 {\n    border-bottom: 1px solid rgba(0, 0, 0, 0.3);\n    padding-bottom: 10px;\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n.refnotes-tooltiptext {\n  left: -200% !important;\n}\n\n.tc-popup {\n  right: 30px !important;\n  left: 30px !important;\n}\n\n.tc-page-controls .tc-popup {\n  right: 20px !important;\n  left: 0px !important;\n}\n.tc-page-controls .tc-drop-down {\n  min-width: 300px !important;\n}\n\n.tc-tags-wrapper .tc-popup {\n  min-width: 50vw;\n  left: 0px !important;\n}\n.tc-tiddler-info {\n  margin: 0 -15px 0 -15px;\n}\n.tc-story-river {\n  margin-left: {{$:/tweaks/cth/StoryLeft}};\n  margin-right: 0px;\n  padding: 20px 20px 20px 20px;\n}\n.tc-sidebar-scrollable {\n  left:50px;\n  padding: 20px 10px 10px 10px;\n}\n.tc-tiddler-frame {\n  margin-bottom: 10px;\n  padding: 10px 15px 0px 15px;\n}\n.tc-topbar-left {\n  top: 0px;\n  left: 0px;\n}\n}\n@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n}",
+    "revision": "0",
+    "bag": "default"
+}
