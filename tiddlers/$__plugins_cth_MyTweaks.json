@@ -37,27 +37,15 @@
         },
         "$:/plugins/kookma/refnotes/viewtemplates/helper": {
             "title": "$:/plugins/kookma/refnotes/viewtemplates/helper",
-            "created": "20240410094455705",
-            "creator": "e",
-            "modified": "20240410094857481",
-            "modifier": "e",
-            "tags": "$:/tags/Refnotes/Template $:/tweaks/cth",
+            "tags": "$:/tags/Refnotes/Template",
             "type": "text/vnd.tiddlywiki",
-            "text": "\\define citedIn(refname)\n  <$let pattern-ref =\"\"\"<<ref[\\s\\['\"]*?$refname$['\"\\s\\]]*?.*>>\"\"\" \n        pattern-cite=\"\"\"<<cite[\\s\\['\"]*?$refname$['\"\\s\\]]*?.*>>\"\"\" \t\n\t>\n   <$list filter=\"[all[tiddlers]!is[system]search:text:regexp<pattern-ref>sort[title]] [all[tiddlers]search:text:regexp<pattern-cite>sort[title]]\" \n          template=\"$:/core/ui/ListItemTemplate\" \n          emptyMessage=\"\"\"//No tiddler has cited this reference//\"\"\" />\n  </$let>\n\\end\n\n\\define display-bibtex-field()\n<div class=\"refnotes-bibtex-field\">\n<span><$text text={{{ [<currentField>removeprefix[bibtex-]titlecase[]] }}} /></span>\n<span><$transclude tiddler=<<currentTiddler>> field=<<currentField>> mode=inline /></span>\n</div>\n\\end\n\n<$let tv-wikilinks=\"no\">\n<!-- display main bibtex fields -->\n<$list filter=\"[enlist<mainFields>]\" variable=currentField>\n<<display-bibtex-field>>\n</$list>\n\n<!-- display other bibtex fields -->\n<details class=\"refnotes-details\">\n  <summary>More details</summary>\n<$list filter=\"[<currentTiddler>fields[]prefix[bibtex]sort[]] -[enlist<mainFields>]\" variable=currentField>\n<<display-bibtex-field>>\n</$list>\n</details>\n</$let>\n\n<!-- show the list of tiddlers cited this reference -->\n; Cited in\n: <$macrocall $name=citedIn refname=<<currentTiddler>> /> ",
-            "revision": "0",
-            "bag": "default"
+            "text": "\\define citedIn(refname)\n  <$let pattern-ref =\"\"\"<<ref[\\s\\['\"]*?$refname$['\"\\s\\]]*?.*>>\"\"\" \n        pattern-cite=\"\"\"<<cite[\\s\\['\"]*?$refname$['\"\\s\\]]*?.*>>\"\"\" \t\n\t>\n   <$list filter=\"[all[tiddlers]search:text:regexp<pattern-ref>sort[title]] [all[tiddlers]search:text:regexp<pattern-cite>sort[title]]\" \n          template=\"$:/core/ui/ListItemTemplate\" \n          emptyMessage=\"\"\"//No tiddler has cited this reference//\"\"\" />\n  </$let>\n\\end\n\n\\define display-bibtex-field()\n<div class=\"refnotes-bibtex-field\">\n<span><$text text={{{ [<currentField>removeprefix[bibtex-]titlecase[]] }}} /></span>\n<span><$transclude tiddler=<<currentTiddler>> field=<<currentField>> mode=inline /></span>\n</div>\n\\end\n\n<$let tv-wikilinks=\"no\">\n<!-- display main bibtex fields -->\n<$list filter=\"[enlist<mainFields>]\" variable=currentField>\n<<display-bibtex-field>>\n</$list>\n\n<!-- display other bibtex fields -->\n<details class=\"refnotes-details\">\n  <summary>More details</summary>\n<$list filter=\"[<currentTiddler>fields[]prefix[bibtex]sort[]] -[enlist<mainFields>]\" variable=currentField>\n<<display-bibtex-field>>\n</$list>\n</details>\n</$let>\n\n<!-- show the list of tiddlers cited this reference -->\n; Cited in\n: <$macrocall $name=citedIn refname=<<currentTiddler>> /> "
         },
         "$:/plugins/kookma/refnotes/viewtemplates/main": {
             "title": "$:/plugins/kookma/refnotes/viewtemplates/main",
-            "created": "20240717111410407",
-            "creator": "e",
-            "modified": "20240717111823235",
-            "modifier": "e",
-            "tags": "$:/tags/ViewTemplate $:/tweaks/cth",
+            "tags": "$:/tags/ViewTemplate",
             "type": "text/vnd.tiddlywiki",
-            "text": "<$list filter=\"[all[current]has[bibtex-title]]\">\n\n<a href={{!!zotero-link}}><<currentTiddler>></a>\n\n<$vars currentType={{{[<currentTiddler>get[bibtex-entry-type]lowercase[]] ~[[miscellaneous]]}}} >\n<$set name=\"bodyLookup\" \n      filter=\"[all[tiddlers+shadows]tag[$:/tags/Refnotes/Template]contains:list<currentType>] +[limit[1]get[title]]\"\n\t\t\tvalue=<<bodyLookup>> \n      emptyValue=\"$:/plugins/kookma/refnotes/viewtemplates/default\">\t\t\n<$transclude tiddler=<<bodyLookup>> field=\"text\" mode=\"inline\"/>\n</$set>\n</$vars>\n</$list>",
-            "revision": "0",
-            "bag": "default"
+            "text": "<$list filter=\"[all[current]has[bibtex-title]]\">\n<$vars currentType={{{[<currentTiddler>get[bibtex-entry-type]lowercase[]] ~[[miscellaneous]]}}} >\n<$set name=\"bodyLookup\" \n      filter=\"[all[tiddlers+shadows]tag[$:/tags/Refnotes/Template]contains:list<currentType>] +[limit[1]get[title]]\"\n\t\t\tvalue=<<bodyLookup>> \n      emptyValue=\"$:/plugins/kookma/refnotes/viewtemplates/default\">\t\t\n<$transclude tiddler=<<bodyLookup>> field=\"text\" mode=\"inline\"/>\n</$set>\n</$vars>\n</$list>"
         },
         "$:/plugins/linonetwo/commandpalette/HideVanillaSearch.css": {
             "title": "$:/plugins/linonetwo/commandpalette/HideVanillaSearch.css",
@@ -75,13 +63,10 @@
             "caption": "History",
             "created": "20160504135142490",
             "creator": "Wim Moermans",
-            "modified": "20231225112001181",
-            "modifier": "e",
-            "tags": "historyplugin $:/tweaks/cth",
-            "type": "text/vnd.tiddlywiki",
-            "text": "<small>breadcrumbs:</small>\n\n{{{ [history[]] }}}\n\n\n",
-            "revision": "0",
-            "bag": "default"
+            "modified": "20160507201121730",
+            "modifier": "wjam",
+            "tags": "$:/tags/SideBar historyplugin",
+            "text": "<small>breadcrumbs:</small>\n\n{{{ [history[]] }}}\n\n\n"
         },
         "$:/tweaks/cth": {
             "title": "$:/tweaks/cth",
@@ -974,6 +959,25 @@
             "auto-trigger-input": "1",
             "revision": "42",
             "bag": "default"
+        },
+        "$:/tweaks/cth/ui/FieldtoTable": {
+            "created": "20241029121639864",
+            "creator": "e",
+            "text": "<$set name=\"viewTiddler\" value=<<currentTiddler>> >\n<$list filter=\"[[$:/tweaks/cth/ui/FieldtoTable/config]fields[]]\">\n<$set name=\"showTag\" value=<<currentTiddler>> >\n<$list filter=\"[<viewTiddler>tag<currentTiddler>]\">\n<$set name=\"fieldShow\" tiddler=\"$:/tweaks/cth/ui/FieldtoTable/config\" field=<<showTag>> >\n<$macrocall $name=table-dynamic filter=\"[<viewTiddler>]\" class=\"w-100\" fields=<<fieldShow>>/>\n</$set>\n</$list>\n</$set>\n</$list>\n</$set>",
+            "tags": "$:/tags/ViewTemplate $:/tweaks/cth",
+            "title": "$:/tweaks/cth/ui/FieldtoTable",
+            "modified": "20241029125453044",
+            "modifier": "e",
+            "list-before": "$:/core/ui/ViewTemplate/body"
+        },
+        "$:/tweaks/cth/ui/FieldtoTable/config": {
+            "created": "20241029122525422",
+            "creator": "e",
+            "text": "",
+            "tags": "$:/tweaks/cth",
+            "title": "$:/tweaks/cth/ui/FieldtoTable/config",
+            "modified": "20241029125542163",
+            "modifier": "e"
         }
     }
 }

@@ -1,0 +1,13 @@
+{
+    "title": "$:/tweaks/cth/ui/terms",
+    "code-body": "yes",
+    "created": "20240410095215327",
+    "creator": "e",
+    "modified": "20241024082617364",
+    "modifier": "LittleYe233",
+    "tags": "$:/tweaks/cth",
+    "type": "text/vnd.tiddlywiki",
+    "text": "\\whitespace trim\n| 中文翻译 | 缩写 | 参考链接 |h\n| {{!!chinese-translation}} | {{!!abbr}} | <a class=\"tc-tiddlylink-external\" href={{!!reference-url}}><$text text={{!!reference-url}}/></a> |\n\n<$transclude>\n\n<$transclude tiddler=\"$:/language/MissingTiddler/Hint\"/>\n\n</$transclude>",
+    "revision": "0",
+    "bag": "default"
+}

@@ -8,4 +8,4 @@ plugin-type: plugin
 source: $:/EvidentlyCube/Trigger/2
 title: $:/plugins/cth/MyTweaks
 type: application/json
-version: 0.0.1
+version: 0.0.2

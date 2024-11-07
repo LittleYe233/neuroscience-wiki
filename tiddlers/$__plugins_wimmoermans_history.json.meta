@@ -1,0 +1,8 @@
+author: Wim Moermans
+dependents: 
+description: History filter generates list of visited tiddlers (breadcrumbs)
+list: readme
+plugin-type: plugin
+title: $:/plugins/wimmoermans/history
+type: application/json
+version: 0.8.2

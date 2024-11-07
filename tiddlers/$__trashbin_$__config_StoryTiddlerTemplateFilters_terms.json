@@ -1,0 +1,13 @@
+{
+    "title": "$:/config/StoryTiddlerTemplateFilters/terms",
+    "created": "20240410094726855",
+    "creator": "e",
+    "list-before": "$:/config/ViewTemplateBodyFilters/default",
+    "modified": "20241017071733247",
+    "modifier": "LittleYe233",
+    "tags": "$:/tweaks/cth $:/tags/ViewTemplateBodyFilter",
+    "type": "text/vnd.tiddlywiki",
+    "text": "[tag[Terms]] :then[{$:/tweaks/cth/config/ui/terms}]",
+    "revision": "0",
+    "bag": "default"
+}
