@@ -1,0 +1,17 @@
+{
+    "tiddlers": {
+        "$:/plugins/LittleYe233/probrandom/filter.js": {
+            "created": "20241107110136518",
+            "creator": "LittleYe233",
+            "text": "(function () {\n\t\"use strict\"\n\n\tconst weightedChoice = (lst, probs) => {\n\t\t/// @see https://stackoverflow.com/a/16751601\n\t\tconst sum = probs.reduce((partialSum, a) => partialSum + a, 0);\n\t\t/// @see ChatGPT :)\n\t\tconst cumulative = probs.reduce((acc, prob, index) => {\n\t\t\tacc.push((acc[index - 1] || 0) + prob / sum);\n\t\t\treturn acc;\n\t\t}, []);\n\t\tconst random = Math.random();\n\t\tfor (let i = 0; i < cumulative.length; i++) {\n\t\t\tif (random < cumulative[i]) {\n\t\t\t\treturn lst[i];\n\t\t\t}\n\t\t}\n\t};\n\n\texports.probrandom = function (source, operator, options) {\n\t\tlet titles = [];\n\t\tsource((tiddler, title) => { titles.push(title); });\n\t\tconst probs = operator.operand.split(\",\").map(x => new Number(x));\n\t\tif (titles.length !== probs.length) return [];\n\t\tfor (const prob of probs) {\n\t\t\tif (prob === NaN) return [];\n\t\t}\n\t\treturn [weightedChoice(titles, probs)];\n\t};\n})();",
+            "tags": "",
+            "title": "$:/plugins/LittleYe233/probrandom/filter.js",
+            "modified": "20241107113329939",
+            "modifier": "LittleYe233",
+            "type": "application/javascript",
+            "bag": "default",
+            "module-type": "filteroperator",
+            "revision": "8"
+        }
+    }
+}

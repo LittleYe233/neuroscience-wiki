@@ -1,0 +1,45 @@
+created: 20241107112602942
+creator: LittleYe233
+list: $:/plugins/LittleYe233/probrandom/filter.js
+modified: 20241107112602953
+modifier: LittleYe233
+rev-created: 20241107110136518
+rev-creator: LittleYe233
+rev-modified: 20241107112406585
+rev-modifier: LittleYe233
+rev-module-type: filteroperator
+rev-tags: 
+rev-type: application/javascript
+title: $:/rev/20241107.19:11:56
+type: text/vnd.tiddlywiki
+
+(function () {
+	"use strict"
+
+	const weightedChoice = (lst, probs) => {
+		/// @see https://stackoverflow.com/a/16751601
+		const sum = probs.reduce((partialSum, a) => partialSum + a, 0);
+		/// @see ChatGPT :)
+		const cumulative = probs.reduce((acc, prob, index) => {
+    	acc.push((acc[index - 1] || 0) + prob / sum);
+    	return acc;
+  	}, []);
+		const random = Math.random();
+		for (let i = 0; i < cumulative.length; i++) {
+    	if (random < cumulative[i]) {
+      	return lst[i];
+    	}
+  	}
+	};
+
+	exports.probrandom = function (source, operator, options) {
+		let titles = [];
+		source((tiddler, title) => { titles.push(title); });
+		const probs = operator.operand.split(",").map(x => new Number(x));
+		if (titles.length !== probs.length) return [];
+		for (const prob of probs) {
+			if (prob === NaN) return [];
+		}
+		return [weightedChoice(titles, probs)];
+	};
+})();
