@@ -1,0 +1,9 @@
+{
+    "title": "$:/Import",
+    "text": "{\n    \"tiddlers\": {\n        \"Untitled\": {\n            \"title\": \"Untitled\",\n            \"text\": \"https://en.wikipedia.org/wiki/Prefrontal_cortex\"\n        }\n    }\n}",
+    "type": "application/json",
+    "status": "pending",
+    "revision": "4",
+    "bag": "default",
+    "plugin-type": "import"
+}

@@ -1,0 +1,35 @@
+abbr: 
+chinese-translation: ROC曲线
+created: 20241109033111465
+creator: LittleYe233
+modified: 20241109045439350
+modifier: LittleYe233
+reference-url: https://en.wikipedia.org/wiki/Receiver_operating_characteristic
+tags: Terms Mathematics
+title: ROC Curve
+type: text/vnd.tiddlywiki
+
+是一种坐标图式的分析工具，用于选择最佳的信号侦测模型、舍弃次佳的模型或者在同一模型中设置最佳阈值。
+
+!! ROC 空间
+
+ROC 空间将伪阳性率（FPR）定义为 X 轴，真阳性率（TPR）定义为 Y 轴。其中 FPR 和 TPR 的计算公式如下：
+
+$$
+FPR=\frac{FP（假阳性）}{TN（真阴性）+FP（假阳性）}，TPR=\frac{TP（真阳性）}{TP（真阳性）+FN（假阴性）}。
+$$
+
+一个二元判别模型在给定阈值下，其准确度可由 ROC 空间上一点衡量。在连续阈值变化下，即可形成该模型的 ROC 曲线。其中，完美的预测表示左上角（0,1）的点；随机预测表示连接（0,0）和（1,1）的对角线。
+
+!! 曲线下面积（AUC）
+
+[img[ROC_Curve_AUC.png]]
+
+AUC 值越大的分类器，正确率越高。
+
+从 AUC 判断分类器（预测模型）优劣的标准：
+
+* AUC = 1，是完美分类器，采用这个预测模型时，存在至少一个阈值能得出完美预测。绝大多数预测的场合，不存在完美分类器。
+* 0.5 < AUC < 1，优于随机猜测。这个分类器（模型）妥善设置阈值的话，能有预测价值。
+* AUC = 0.5，跟随机猜测一样（例：丢铜板），模型没有预测价值。
+* AUC < 0.5，比随机猜测还差；但只要总是反预测而行，就优于随机猜测。
