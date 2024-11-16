@@ -1,8 +1,8 @@
 created: 20240905144903148
 creator: e
-modified: 20240905144912310
-modifier: e
+modified: 20241109144232639
+modifier: LittleYe233
 title: $:/config/ViewTemplate/Visibility/$:/plugins/kookma/utility/viewtemplates/source-toggle-button
 type: text/vnd.tiddlywiki
 
-hide
+show

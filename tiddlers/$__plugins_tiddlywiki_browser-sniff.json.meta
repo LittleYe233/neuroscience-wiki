@@ -1,0 +1,13 @@
+created: 20241111073319827
+creator: LittleYe233
+dependents: 
+description: Browser feature detection
+list: readme usage
+modified: 20241111073319843
+modifier: LittleYe233
+name: Browser Sniff
+plugin-type: plugin
+stability: STABILITY_2_STABLE
+title: $:/plugins/tiddlywiki/browser-sniff
+type: application/json
+version: 5.3.5
